@@ -32,12 +32,8 @@ export const TvShows = () => {
           }}
         >
           {trending.map(({ poster_path, original_name }, index) => (
-            <Link href={`/movie/${original_name}`}>
-              <TVShowCard
-                imagePath={poster_path}
-                title={original_name}
-                key={index}
-              />
+            <Link href={`/movie/${original_name}`} key={index}>
+              <TVShowCard imagePath={poster_path} title={original_name} />
             </Link>
           ))}
         </FlexRow>

@@ -34,8 +34,8 @@ export const LatestMovies = () => {
           }}
         >
           {latest.map(({ poster_path, id, original_title }, index) => (
-            <Link href={`/movie/${original_title}`}>
-              <LatestMovieCard imagePath={poster_path} key={index} />
+            <Link href={`/movie/${original_title}`} key={index}>
+              <LatestMovieCard imagePath={poster_path} />
             </Link>
           ))}
         </FlexRow>
